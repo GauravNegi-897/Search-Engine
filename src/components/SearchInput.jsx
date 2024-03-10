@@ -3,8 +3,8 @@ import {AiOutlineSearch} from "react-icons/ai";
 import {IoMdClose} from "react-icons/io";
 import { useNavigate , useParams } from "react-router-dom";
 
-import MicIcon from "../assets/mic.svg";
-import ImageIcon from "../assets/image.svg";
+import MicIcon from "../assets/mic.png";
+import ImageIcon from "../assets/camera.png";
 
 const SearchInput = () =>{
 
@@ -26,7 +26,7 @@ const SearchInput = () =>{
                 <IoMdClose size={24} color='#70757a' className="cursor-pointer" onClick={()=>setSearchQuery("")}
                 />
             )}
-            <img className="h-6 w-6 cursor-pointer" src={MicIcon} />
+            <img className="h-8 w-8 cursor-pointer" src={MicIcon} />
             <img className="h-6 w-6 cursor-pointer" src={ImageIcon}/>
          </div>
              
