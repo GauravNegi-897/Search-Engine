@@ -1,6 +1,6 @@
 import  { createContext, useState } from "react";
-import SearchResult from
-import Home from './components/Home';
+import SearchResult from "../components/SearchResult";
+import Home from '../components/Home';
 
 export const Context = createContext();
 

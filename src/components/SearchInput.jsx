@@ -7,13 +7,14 @@ import MicIcon from "../assets/mic.png";
 import ImageIcon from "../assets/camera.png";
 
 const SearchInput = () =>{
+    const {query} = useParams();
+    const [searchQuery , setSearchQuery] = useState( query || "");
+    const navigate = useNavigate();
 
-    const [searchQuery , setSearchQuery] = useState("");
-
-    const SearchQueryHandler = (e) =>{
-            if(e.key === 'Enter' && searchQuery.length > 0)
+    const SearchQueryHandler = (event) =>{
+            if(event.key === 'Enter' && searchQuery.length > 0)
             {
-                
+                navigate(`/${searchQuery}/${1}`);
             }
     }
 
@@ -22,7 +23,7 @@ const SearchInput = () =>{
         <AiOutlineSearch size={18} color="#9aa0a6" />
         <input type="text" 
         onChange={(e)=> setSearchQuery(e.target.value)}
-         onKeyUp={(e) => SearchQueryHandler}
+         onKeyUp={SearchQueryHandler}
          value={searchQuery}
          autoFocus
          className="grow outline-0 text-black/[0.87]"
