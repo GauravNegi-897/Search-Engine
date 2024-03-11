@@ -10,12 +10,19 @@ const SearchInput = () =>{
 
     const [searchQuery , setSearchQuery] = useState("");
 
-    return <div id="searchBox" className="h-[46px] w-full md:w-[584px] flex items-center gap-3 px-4 border border-[#dfe1e5] rounded-3xl hover:bg-white hover:shadow-c hover:border-0 focus-within:shadow-c focus-within:border-0">
+    const SearchQueryHandler = (e) =>{
+            if(e.key === 'Enter' && searchQuery.length > 0)
+            {
+                
+            }
+    }
+
+    return <div id="searchBox" className="h-[40px] w-full md:w-[500px] flex items-center gap-3 px-4 border border-[#dfe1e5] rounded-3xl hover:bg-white hover:shadow-c hover:border-0 focus-within:shadow-c focus-within:border-0">
 
         <AiOutlineSearch size={18} color="#9aa0a6" />
         <input type="text" 
         onChange={(e)=> setSearchQuery(e.target.value)}
-         onKeyUp={(e)=> console.log(e.target.value)}
+         onKeyUp={(e) => SearchQueryHandler}
          value={searchQuery}
          autoFocus
          className="grow outline-0 text-black/[0.87]"

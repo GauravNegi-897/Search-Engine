@@ -14,7 +14,6 @@ export const menu = [
 
 export const quickLinks = [
     "About",
-    "Advertising",
     "Business",
     "How Search works",
 ];
