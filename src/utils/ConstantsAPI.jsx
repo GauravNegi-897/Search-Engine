@@ -1,10 +1,21 @@
 import  { createContext, useState } from "react";
-import SearchResult from "../components/SearchResult";
-import Home from '../components/Home';
 
 export const Context = createContext();
 
-export const AppContext = () => {
+export const AppContext = (props) => {
 
-    return <div>App Content</div>
+    const [imageSearch , setImageSearch] = useState(false);
+
+
+
+    return (
+        <Context.Provider 
+            value={{
+                    imageSearch,
+                    setImageSearch,
+                    }}
+                >  
+            {props.children}
+        </Context.Provider>
+    );
 };
