@@ -1,4 +1,8 @@
 const searchItemTemplate = ({data}) =>{
+
+    function createMarkup(html) {
+        return {__html: html};
+    }
     return <div className="flex flex-col py-3 max-w-[700px]">
 
         <div
@@ -16,10 +20,10 @@ const searchItemTemplate = ({data}) =>{
             </div>
         </div>
             
-            <div className="text-sm text-[#4d5156] leading-6 pt-1">
-                {data.htmlSnippet}
-            </div>
+            <div className="text-sm text-[#4d5156] leading-6 pt-1" 
+            dangerouslySetInnerHTML={createMarkup(data.htmlSnippet)}
+            />    
     </div>
-}
+};
 
-export default searchItemTemplate;
+export default searchItemTemplate;  
