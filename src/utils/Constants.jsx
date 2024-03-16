@@ -19,7 +19,7 @@ export const quickLinks = [
 ];
 export const settingMenu = ["Privacy", "Terms", "Settings"];
 
-export const pagination = [
+ export const pagination = [
     { page: 1, startIndex: 1 },
     { page: 2, startIndex: 11 },
     { page: 3, startIndex: 21 },
@@ -31,3 +31,6 @@ export const pagination = [
     { page: 9, startIndex: 81 },
     { page: 10, startIndex: 91 },
 ];
+
+
+

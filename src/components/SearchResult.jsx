@@ -6,7 +6,7 @@ import SearchResultHeader from './SearchResultHeader';
 import Footer from "./Footer";
 import SearchItemTemplate from "./SearchItemTemplate";
 import SearchImageItemTemplate  from "./SearchImageItemTemplate"
-import pagination from "./Pagination";
+import Pagination from "./Pagination";
 import { Context } from "../utils/ConstantsAPI";
 
 const SearchResult =()=>{
@@ -60,6 +60,7 @@ const SearchResult =()=>{
                         ))}
                     </div>
                )}
+               <Pagination queries={queries}/>    
             </main>
             <Footer/>
     </div>
