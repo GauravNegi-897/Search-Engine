@@ -23,11 +23,10 @@ const SearchResult =()=>{
         let payload = {q:query , start:startIndex}
         if(imageSearch)
         {
-            payload.searchType = "Images";
+            payload.searchType = "image";
         }
 
         fetchDatafromApi(payload).then((res) =>{
-            console.log(res)
             setResult(res);
         });
     } ;
@@ -54,9 +53,11 @@ const SearchResult =()=>{
                     
                 </>):(
                 
-                    <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
-                        {items.map((item,index) => (
-                            <SearchImageItemTemplate key={index} data={item}/>
+                    <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5  gap-2">
+                        {items.map((item,Index) => (
+                            <SearchImageItemTemplate 
+                            key={Index} 
+                            data={item}/>
                         ))}
                     </div>
                )}

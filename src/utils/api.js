@@ -3,14 +3,14 @@ import axios from 'axios';
 
 const BASE_URL = "https://www.googleapis.com/customsearch/v1";
 const params = {
-    key:"AIzaSyDiKizhsumFoJCMPo1pBPS7rM0pPQuhNes",
-    cx:"3565ec9a1b0344ef3"
+    key: "AIzaSyCfWg3YF4Qyjem6NLUSEO7m84rBAA0mwsk",
+    cx: "27ccb940efd3840f3"
 }
 
 export const fetchDatafromApi = async (payload) =>{
     const {data} = await axios.get(BASE_URL,{
-        params:{...params , ...payload}
+        params: {...params , ...payload}
     })
 
     return data;
-}
+};

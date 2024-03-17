@@ -36,7 +36,7 @@ const Pagination = ({queries}) =>{
                 </div>
             )} 
 
-            <img className="w-[250px] md:w-[60px] " src={Logo} />
+            <img className="w-[60px] md:w-[60px] " src={Logo} />
             {queries.nextPage && (
                 <div className="absolute right-[-30px] md:right-[-40px] top-[-10px]"
                 onClick={() =>
@@ -51,14 +51,14 @@ const Pagination = ({queries}) =>{
                 </div>
             )} 
         </div>
-        <div className="flex gap-3 text-[4285f4] text-sm">
+        <div className="flex gap-3 text-[#4285f4] text-sm">
             {pagination.map((p) =>(
 
                 <span
                 
                 key={p.page}
                 onClick ={() => paginationClickerHandler(p.startIndex)}
-                className={`cursor-pointer ${page === p.startIndex ? "text-black":""}`}
+                className={`cursor-pointer ${page === p.startIndex ? "text-black": ""}`}
                 >
                     {p.page}
                 </span>
